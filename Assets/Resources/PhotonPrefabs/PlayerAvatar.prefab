@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1050}
   - component: {fileID: 649}
   - component: {fileID: 9034610490258818875}
+  - component: {fileID: 5144198553571607617}
   m_Layer: 0
   m_Name: PlayerAvatar
   m_TagString: Untagged
@@ -179,6 +180,18 @@ MonoBehaviour:
   BulletSpawnPoint: {fileID: 4310460908334044743}
   Camera: {fileID: 4290614640668558521}
   targetTransform: {fileID: 7171952463248245702}
+--- !u!114 &5144198553571607617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71984746b7471d9429ece014684faf2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &605055124307836666
 GameObject:
   m_ObjectHideFlags: 0

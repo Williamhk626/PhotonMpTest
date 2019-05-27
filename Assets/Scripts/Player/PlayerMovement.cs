@@ -110,7 +110,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButton("Fire1"))
         {
             FaceForward = true;
-
             PV.RPC("Fire", RpcTarget.AllViaServer, transform.rotation);
         }
         else

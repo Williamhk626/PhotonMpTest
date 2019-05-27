@@ -28,13 +28,11 @@ public class PlayerCameraThirdPerson : MonoBehaviour
 
     void LateUpdate()
     {
-
         yaw += Input.GetAxis("Mouse X") * MouseSensitivity;
         pitch += Input.GetAxis("Mouse Y") * MouseSensitivity;
         pitch = Mathf.Clamp(pitch, PitchMinMax.x, PitchMinMax.y);
 
         currentRotation = new Vector3(pitch, yaw);
-        //transform.eulerAngles = currentRotation;
         Target.eulerAngles = currentRotation;
         transform.LookAt(Target);
 

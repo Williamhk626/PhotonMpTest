@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerActions : MonoBehaviour
 {
+    private float reach = 4;
 
     private PlayerMovement playerMovement;
     private PhotonView PV;
@@ -17,6 +18,26 @@ public class PlayerActions : MonoBehaviour
         
     }
 
+    void Update()
+    {
+        if (!PV.IsMine)
+            return;
+
+
+        if (Input.GetButton("Interact"))
+        {
+            Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, reach);
+
+            
+            if (hit.collider != null && hit.collider.tag == "Interactable")
+            {
+                IInteractable interactable = hit.transform.GetComponent<Door>();
+
+                interactable.Interact();
+                Debug.Log("Interacted with " + hit.collider.name);
+            }
+        }
+    }
 
 
 }
