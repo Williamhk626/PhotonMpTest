@@ -24,7 +24,7 @@ public class PlayerActions : MonoBehaviour
             return;
 
 
-        if (Input.GetButton("Interact"))
+        if (Input.GetButtonDown("Interact"))
         {
             Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, reach);
 
